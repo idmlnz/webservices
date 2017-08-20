@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+/Users/imalonzo/projects/webservices/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3806714048.index
+4180213687.index
+1036473963.index
+1509910404.index
+2631447192.index
+3506869764.index

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Message.java&apos; to &apos;messenger/src/main/java/org.imalonzo.javabrains.messenger.model&apos;&#x0A;- Original project: &apos;messenger&apos;&#x0A;- Destination element: &apos;messenger/src/main/java/org.imalonzo.javabrains.messenger.model&apos;&#x0A;- Original element: &apos;org.imalonzo.javabrains.messenger.model.Message.java&apos;" description="Copy compilation unit" destination="/src\/main\/java&lt;org.imalonzo.javabrains.messenger.model" element1="/src\/main\/java&lt;org.imalonzo.javabrains.messenger.model{Message.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1503265223087" units="1" version="1.0"/>
+</session>

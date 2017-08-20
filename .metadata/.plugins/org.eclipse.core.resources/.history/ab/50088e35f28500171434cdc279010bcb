@@ -1,0 +1,16 @@
+package org.imalonzo.javabrains.messenger.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.imalonzo.javabrains.messenger.database.DatabaseClass;
+import org.imalonzo.javabrains.messenger.model.Message;
+
+public class MessageService {
+	private Map<Long, Message> messages = DatabaseClass.getMessages();
+	
+	public List<Message> getAllMessages() {
+		return new ArrayList<>(messages.values());
+	}
+}

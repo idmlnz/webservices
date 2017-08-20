@@ -1,0 +1,5 @@
+package org.imalonzo.javabrains.messenger.service;
+
+public class MessageService {
+
+}

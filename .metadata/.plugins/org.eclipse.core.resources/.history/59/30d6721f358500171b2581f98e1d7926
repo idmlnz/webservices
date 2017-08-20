@@ -1,0 +1,9 @@
+package org.imalonzo.javabrains.messenger.service;
+
+public class MessageService {
+	
+	public List<Message> getAllMessages() {
+		Message m1 =  new Message(1L, "Hello World", "James");
+		Message m2 =  new Message(2L, "Hello World", "Jim");
+	}
+}
