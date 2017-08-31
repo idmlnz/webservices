@@ -10,6 +10,10 @@ import org.imalonzo.javabrains.messenger.model.Message;
 public class MessageService {
 	private Map<Long, Message> messages = DatabaseClass.getMessages();
 	
+	public MessageService() {
+		messages.put(1L, new Message(1, "Hello", "John Smith"));
+		messages.put(2L, new Message(1, "World", "John Smith"));
+	}
 	public List<Message> getAllMessages() {
 		return new ArrayList<>(messages.values());
 	}
