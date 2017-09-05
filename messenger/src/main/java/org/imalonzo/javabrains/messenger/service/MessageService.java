@@ -11,15 +11,20 @@ public class MessageService {
 	private Map<Long, Message> messages = DatabaseClass.getMessages();
 	
 	public MessageService() {
-		messages.put(1L, new Message(1, "Hello", "John Smith"));
-		messages.put(2L, new Message(1, "World", "John Smith"));
+		messages.put(1L, new Message(1, "Message1", "John Smith"));
+		messages.put(2L, new Message(2, "Message2", "Jose Ortega"));
 	}
+
 	public List<Message> getAllMessages() {
 		return new ArrayList<>(messages.values());
 	}
 	
 	public Message getMessage(long id) {
 		return messages.get(id);
+	}
+
+	public long getSize() {
+		return messages.size();
 	}
 	
 	public Message addMessage(Message message) {
