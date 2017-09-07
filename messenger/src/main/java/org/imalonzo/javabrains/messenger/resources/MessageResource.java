@@ -3,6 +3,7 @@ package org.imalonzo.javabrains.messenger.resources;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -16,38 +17,38 @@ import org.imalonzo.javabrains.messenger.model.Message;
 import org.imalonzo.javabrains.messenger.service.MessageService;
 
 @Path("messages")
+@Consumes(MediaType.APPLICATION_JSON)	
+@Produces(MediaType.APPLICATION_JSON)	
 public class MessageResource {
   MessageService messageService = new MessageService();	
   
   @GET
-  @Produces(MediaType.APPLICATION_JSON)	
   public List<Message> getMessages() {
     return messageService.getAllMessages();
   }
   
   @GET
   @Path("/{messageId}")
-  @Produces(MediaType.APPLICATION_JSON)	
   public Message getMessage(@PathParam("messageId") long messageId) {
     return messageService.getMessage(messageId);
   }	
   
   @POST
-  @Consumes(MediaType.APPLICATION_JSON)	
-  @Produces(MediaType.APPLICATION_JSON)	
   public Message addMessages(Message message) {
     return messageService.addMessage(message);
   }
   
-  
   @PUT
-  @Consumes(MediaType.APPLICATION_JSON)	
-  @Produces(MediaType.APPLICATION_JSON)	
-  public Message updateMessages(Message message) {
+  @Path("/{messageId}")
+  public Message updateMessages(@PathParam("messageId") long messageId, Message message) {
+    message.setId(messageId); 
     return messageService.updateMessage(message);
   }
   
-  
-  
+  @DELETE 
+  @Path("/{messageId}")
+  public Message ssages(@PathParam("messageId") long messageId) {
+    return messageService.removeMessage(messageId);
+  }
 
 }
