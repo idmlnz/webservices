@@ -61,4 +61,9 @@ public class Profile {
 	public void setCreated(Date created) {
 		this.created = created;
 	}
+	
+	@Override
+	public String toString() {
+		return (this.id + ":" + this.profileName + ":"+ this.firstName + ":" + this.lastName);
+	}
 }
